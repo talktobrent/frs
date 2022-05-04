@@ -71,4 +71,8 @@ def frs(what:str, query:str):
 
 
 if __name__ == '__main__':
-    app.run()
+    try:
+        app.run()
+    except BaseException as e:
+        logger.critical('application failed to start: %s', e)
+        
