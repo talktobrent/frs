@@ -57,7 +57,7 @@ def frs(what:str, query:str):
             logger.warning('bad %s', what)
             return {"usage": "/gender/<name> OR /place/<zip>"}, 400
         logger.info('success: %s %s', what, query)
-        return jsonify(value)
+        return {query: value}
     # value not returned from API
     except KeyError as e:
         logger.warning('not found %s %s', what, query)
