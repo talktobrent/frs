@@ -54,11 +54,13 @@ def frs(what:str, query:str):
             res = requests.get('http://api.zippopotam.us/us/{}'.format(query)).json()
             value = res['places'][0]['place name']
         else:
+            # bad path
             logger.warning('bad %s', what)
             return {"usage": "/gender/<name> OR /place/<zip>"}, 400
+        # good value
         logger.info('success: %s %s', what, query)
         return {query: value}
-    # value not returned from API
+    # value not returned from API (not found)
     except (KeyError, IndexError) as e:
         logger.warning('not found %s %s', what, query)
         return {query: "not found"}, 404
