@@ -1,8 +1,8 @@
 # frs
 ## API endpoints:
-### /api/place/<zip>
+### /api/place/`<zip>`
   find a placename by zipcode
-### /api/gender/<name>
+### /api/gender/`<name>`
   estimate a gender by name  
   
 ## logs to:
