@@ -5,7 +5,7 @@
 ### /api/gender/<name>
   estimate a gender by name  
   
-##logs to:
+## logs to:
   `frs_takehome.log` and email
 ## setup:  
   `pip install -r requirements.txt`  
